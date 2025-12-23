@@ -1,14 +1,29 @@
+:root {
+    --bg1: #002f5c;
+    --bg2: #001a33;
+    --card-bg: rgba(255, 255, 255, 0.08);
+    --text: white;
+}
+
+body.light {
+    --bg1: #f4f6fb;
+    --bg2: #dfe7f3;
+    --card-bg: white;
+    --text: #111;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: white;
+    color: var(--text);
 }
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(135deg, #002f5c, #001a33);
+    background: linear-gradient(135deg, var(--bg1), var(--bg2));
     min-height: 100vh;
+    transition: background 0.3s ease;
 }
 
 .container {
@@ -17,62 +32,91 @@ body {
     padding: 40px 20px;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 50px;
+/* Theme toggle */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--card-bg);
+    border: none;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+/* Header */
+.profile-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.profile-pic img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 15px;
 }
 
 .subtitle {
-    font-size: 1.1rem;
     opacity: 0.85;
 }
 
+/* Social links */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0.85;
+}
+
+.social-links a:hover {
+    opacity: 1;
+}
+
+/* Sections */
 .section-header h2 {
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 50px 0 30px;
     font-size: 2rem;
 }
 
+/* Cards */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .list-card {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 14px;
+    padding: 25px;
     text-align: center;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.list-card h3 {
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-}
-
-.list-card p {
-    opacity: 0.9;
-    line-height: 1.5;
+    transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
 .list-card:hover {
-    transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-6px);
 }
 
-.list-elements {
-    display: inline-block;
-    text-align: left;
+.project-card {
+    text-decoration: none;
 }
 
-.card-title {
-    margin-bottom: 100px;
+[data-animate] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-animate].show {
+    opacity: 1;
+    transform: translateY(0);
 }

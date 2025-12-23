@@ -1,72 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raghuram | Personal Site</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>Hello, I'm Raghuram 👋</h1>
-        <p class="subtitle">
-          A high school student passionate about engineering and software
-          development
-        </p>
-      </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Raghuram | Personal Site</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <button class="theme-toggle" id="themeToggle">🌙</button>
 
-      <section class="section-header">
-        <h2>My Skills</h2>
+        <div class="container">
+            <header class="profile-header" data-animate>
+                <div class="profile-pic">
+                    <img src="images/photo.png" alt="Profile picture" />
+                </div>
 
-        <div class="card-container">
-          <div class="list-card">
-            <h3 class="card-title">Languages</h3>
-            <ul class="list-elements">
-              <li>Java</li>
-              <li>Python</li>
-              <li>C/C++</li>
-              <li>C#</li>
-              <li>Go</li>
-              <li>Swift</li>
-            </ul>
-          </div>
+                <h1>Hello, I'm Raghuram 👋</h1>
+                <p class="subtitle">
+                    High school student passionate about engineering and
+                    software development
+                </p>
 
-          <div class="list-card">
-            <h3 class="card-title">Software/Frameworks</h3>
-            <ul class="list-elements">
-              <li>Unity</li>
-              <li>Android</li>
-              <li>Pytorch</li>
-              <li>Tensorflow</li>
-              <li>Git/Github</li>
-            </ul>
-          </div>
+                <div class="social-links">
+                    <a href="https://github.com/endgamerdagoat" target="_blank"
+                        >GitHub</a
+                    >
+                </div>
+            </header>
+
+            <section class="section-header" data-animate>
+                <h2>My Skills</h2>
+
+                <div class="card-container">
+                    <div class="list-card">
+                        <h3 class="card-title">Languages</h3>
+                        <ul class="list-elements">
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>C / C++</li>
+                            <li>C#</li>
+                            <li>Go</li>
+                            <li>Swift</li>
+                        </ul>
+                    </div>
+
+                    <div class="list-card">
+                        <h3 class="card-title">Frameworks & Tools</h3>
+                        <ul class="list-elements">
+                            <li>Unity</li>
+                            <li>Android</li>
+                            <li>PyTorch</li>
+                            <li>TensorFlow</li>
+                            <li>Git & GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-header" data-animate>
+                <h2>My Projects</h2>
+
+                <div class="card-container">
+                    <a
+                        class="list-card project-card"
+                        href="https://github.com/Centsible-AI/Centsible"
+                        target="_blank"
+                    >
+                        <h3 class="card-title">Centsible</h3>
+                        <p>AI-powered budget optimizer for smarter finance.</p>
+                    </a>
+
+                    <a
+                        class="list-card project-card"
+                        href="https://github.com/endgamerdagoat/Password-Generator"
+                        target="_blank"
+                    >
+                        <h3 class="card-title">Password Generator</h3>
+                        <p>Python tool for generating secure passwords.</p>
+                    </a>
+
+                    <a
+                        class="list-card project-card"
+                        href="https://github.com/endgamerdagoat/Snake-Game"
+                        target="_blank"
+                    >
+                        <h3 class="card-title">Snake</h3>
+                        <p>Modern remake of the classic Snake game.</p>
+                    </a>
+                </div>
+            </section>
         </div>
-      </section>
 
-      <section class="section-header">
-        <h2>My Projects</h2>
-
-        <div class="card-container">
-          <div class="list-card">
-            <h3 class="card-title">Centsible</h3>
-            <p>
-              An AI budget optimizer that helps users manage their finances.
-            </p>
-          </div>
-
-          <div class="list-card">
-            <h3 class="card-title">Password Generator</h3>
-            <p>A Python script that generates secure passwords.</p>
-          </div>
-
-          <div class="list-card">
-            <h3 class="card-title">Snake</h3>
-            <p>A modern clone of the classic Snake game.</p>
-          </div>
-        </div>
-      </section>
-    </div>
-  </body>
+        <script src="script.js"></script>
+    </body>
 </html>
