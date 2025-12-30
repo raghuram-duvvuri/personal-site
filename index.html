@@ -3,94 +3,180 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Raghuram | Personal Site</title>
+        <title>Raghuram | Portfolio</title>
+
+        <!-- Devicon for skill icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
+
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <button class="theme-toggle" id="themeToggle">🌙</button>
-
-        <div class="container">
-            <header class="profile-header" data-animate>
-                <div class="profile-pic">
-                    <img src="images/photo.png" alt="Profile picture" />
-                </div>
-
-                <h1>Hello, I'm <span>Raghuram</span> 👋</h1>
-                <p class="subtitle">
-                    High school student passionate about engineering and
-                    software development
-                </p>
-
-                <div class="social-links">
+        <nav class="navbar">
+            <div class="nav-logo">Raghuram</div>
+            <ul class="nav-links">
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#learning">Learning</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li>
                     <a href="https://github.com/endgamerdagoat" target="_blank"
                         >GitHub</a
                     >
-                </div>
-            </header>
+                </li>
+            </ul>
+        </nav>
 
-            <section class="section-header" data-animate>
-                <h2>My Skills</h2>
+        <div id="particles-js"></div>
 
-                <div class="card-container">
-                    <div class="list-card">
-                        <h3 class="card-title">Languages</h3>
-                        <ul class="list-elements">
-                            <li>Java</li>
-                            <li>Python</li>
-                            <li>C / C++</li>
-                            <li>C#</li>
-                            <li>Go</li>
-                            <li>Swift</li>
-                        </ul>
-                    </div>
+        <button class="theme-toggle" id="themeToggle">🌙</button>
 
-                    <div class="list-card">
-                        <h3 class="card-title">Frameworks & Tools</h3>
-                        <ul class="list-elements">
-                            <li>Unity</li>
-                            <li>Android</li>
-                            <li>PyTorch</li>
-                            <li>TensorFlow</li>
-                            <li>Git & GitHub</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+        <!-- HERO -->
+        <section class="hero" data-animate>
+            <div class="hero-text">
+                <h1>Hi, I'm <span>Raghuram</span></h1>
+                <p>
+                    High school student passionate about engineering, software
+                    development, and building cool things.
+                </p>
 
-            <section class="section-header" data-animate>
-                <h2>My Projects</h2>
-
-                <div class="card-container">
+                <div class="hero-links">
                     <a
-                        class="list-card project-card"
-                        href="https://github.com/Centsible-AI/Centsible"
+                        href="https://github.com/endgamerdagoat"
                         target="_blank"
+                        class="btn"
                     >
-                        <h3 class="card-title">Centsible</h3>
-                        <p>AI-powered budget optimizer for smarter finance.</p>
-                    </a>
-
-                    <a
-                        class="list-card project-card"
-                        href="https://github.com/endgamerdagoat/Password-Generator"
-                        target="_blank"
-                    >
-                        <h3 class="card-title">Password Generator</h3>
-                        <p>Python tool for generating secure passwords.</p>
-                    </a>
-
-                    <a
-                        class="list-card project-card"
-                        href="https://github.com/endgamerdagoat/Snake-Game"
-                        target="_blank"
-                    >
-                        <h3 class="card-title">Snake</h3>
-                        <p>Modern remake of the classic Snake game.</p>
+                        GitHub
                     </a>
                 </div>
-            </section>
-        </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/photo.png" alt="Profile picture" />
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section" data-animate>
+            <h2>Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill">
+                    <i class="devicon-java-plain"></i>
+                    <span>Java</span>
+                </div>
+                <div class="skill">
+                    <i class="devicon-python-plain"></i>
+                    <span>Python</span>
+                </div>
+                <div class="skill">
+                    <i class="devicon-cplusplus-plain"></i>
+                    <span>C++</span>
+                </div>
+                <div class="skill">
+                    <i class="devicon-csharp-plain"></i>
+                    <span>C#</span>
+                </div>
+                <div class="skill">
+                    <i class="devicon-go-original-wordmark"></i>
+                    <span>Go</span>
+                </div>
+                <div class="skill">
+                    <i class="devicon-swift-plain"></i>
+                    <span>Swift</span>
+                </div>
+                <div class="skill">
+                    <i class="devicon-unity-original"></i>
+                    <span>Unity</span>
+                </div>
+                <div class="skill">
+                    <i class="devicon-git-plain"></i>
+                    <span>Git</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="learning" data-animate>
+            <h2>Currently Learning</h2>
+
+            <div class="learning-grid">
+                <div class="learning-card">
+                    <i class="devicon-react-original"></i>
+                    <h3>React</h3>
+                    <p>Building modern, scalable front-end applications.</p>
+                </div>
+
+                <div class="learning-card">
+                    <i class="devicon-docker-plain"></i>
+                    <h3>Docker</h3>
+                    <p>Containerization and deployment workflows.</p>
+                </div>
+
+                <div class="learning-card">
+                    <i class="devicon-pytorch-original"></i>
+                    <h3>Deep Learning</h3>
+                    <p>Neural networks and real-world AI applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" data-animate>
+            <h2>Projects</h2>
+
+            <div class="projects-grid">
+                <a
+                    href="https://github.com/Centsible-AI/Centsible"
+                    target="_blank"
+                    class="project-card"
+                >
+                    <h3>Centsible</h3>
+                    <p>AI-powered budget optimizer for smarter finance.</p>
+                </a>
+
+                <a
+                    href="https://github.com/endgamerdagoat/Password-Generator"
+                    target="_blank"
+                    class="project-card"
+                >
+                    <h3>Password Generator</h3>
+                    <p>Secure password generation tool in Python.</p>
+                </a>
+
+                <a
+                    href="https://github.com/endgamerdagoat/Snake-Game"
+                    target="_blank"
+                    class="project-card"
+                >
+                    <h3>Snake Game</h3>
+                    <p>Modern remake of the classic Snake game.</p>
+                </a>
+            </div>
+        </section>
 
         <script src="script.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+        <script>
+            particlesJS("particles-js", {
+                particles: {
+                    number: { value: 60 },
+                    color: { value: "#4fc3f7" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.25 },
+                    size: { value: 3 },
+                    move: {
+                        enable: true,
+                        speed: 1.2,
+                    },
+                    line_linked: {
+                        enable: true,
+                        opacity: 0.15,
+                    },
+                },
+            });
+        </script>
     </body>
 </html>

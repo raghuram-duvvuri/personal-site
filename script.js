@@ -1,14 +1,14 @@
 const animatedElements = document.querySelectorAll("[data-animate]");
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
         }
     });
 });
 
-animatedElements.forEach((el) => observer.observe(el));
+animatedElements.forEach(el => observer.observe(el));
 
 const toggleBtn = document.getElementById("themeToggle");
 
