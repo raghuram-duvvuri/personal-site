@@ -3,7 +3,15 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Raghuram | Portfolio</title>
+        <title>Raghuram Duvvuri | Personal Site</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
 
         <!-- Devicon for skill icons -->
         <link
@@ -11,34 +19,36 @@
             href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
         />
 
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <nav class="navbar">
-            <div class="nav-logo">Raghuram</div>
+            <div class="nav-logo"><a href="#home">Raghuram Duvvuri</a></div>
             <ul class="nav-links">
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#learning">Learning</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li>
-                    <a href="https://github.com/endgamerdagoat" target="_blank"
-                        >GitHub</a
-                    >
-                </li>
             </ul>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-sun"></i>
+            </button>
         </nav>
 
         <div id="particles-js"></div>
 
-        <button class="theme-toggle" id="themeToggle">🌙</button>
-
         <!-- HERO -->
-        <section class="hero" data-animate>
+        <section class="hero" id="home" data-animate>
             <div class="hero-text">
                 <h1>Hi, I'm <span>Raghuram</span></h1>
                 <p>
-                    High school student passionate about engineering, software
-                    development, and building cool things.
+                    A high school student passionate about software development,
+                    mathematics, physics, and engineering.
                 </p>
 
                 <div class="hero-links">
@@ -58,7 +68,7 @@
         </section>
 
         <!-- SKILLS -->
-        <section class="section" data-animate>
+        <section class="section" id="skills" data-animate>
             <h2>Skills</h2>
 
             <div class="skills-grid">
@@ -87,12 +97,20 @@
                     <span>Swift</span>
                 </div>
                 <div class="skill">
-                    <i class="devicon-unity-plain"></i>
-                    <span>Unity</span>
-                </div>
-                <div class="skill">
                     <i class="devicon-git-plain"></i>
                     <span>Git</span>
+                </div>
+                <div class="skill">
+                    <i class="devicon-html5-plain"></i>
+                    <span>HTML</span>
+                </div>
+                <div class="skill">
+                    <i class="devicon-css3-plain"></i>
+                    <span>CSS</span>
+                </div>
+                <div class="skill">
+                    <i class="devicon-javascript-plain"></i>
+                    <span>JavaScript</span>
                 </div>
             </div>
         </section>
@@ -118,11 +136,17 @@
                     <h3>Deep Learning</h3>
                     <p>Neural networks and real-world AI applications.</p>
                 </div>
+
+                <div class="learning-card">
+                    <i class="devicon-unity-plain"></i>
+                    <h3>Unity</h3>
+                    <p>Game development and interactive 3D experiences.</p>
+                </div>
             </div>
         </section>
 
         <!-- PROJECTS -->
-        <section class="section" data-animate>
+        <section class="section" id="projects" data-animate>
             <h2>Projects</h2>
 
             <div class="projects-grid">
@@ -131,6 +155,9 @@
                     target="_blank"
                     class="project-card"
                 >
+                    <div class="project-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                     <h3>Centsible</h3>
                     <p>AI-powered budget optimizer for smarter finance.</p>
                 </a>
@@ -140,6 +167,9 @@
                     target="_blank"
                     class="project-card"
                 >
+                    <div class="project-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
                     <h3>Password Generator</h3>
                     <p>Secure password generation tool in Python.</p>
                 </a>
@@ -149,6 +179,9 @@
                     target="_blank"
                     class="project-card"
                 >
+                    <div class="project-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
                     <h3>Snake Game</h3>
                     <p>Modern remake of the classic Snake game.</p>
                 </a>
